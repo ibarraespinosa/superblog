@@ -86,14 +86,26 @@ git init
 git add .
 git commit -m "first message"
 git remote add origin https://github.com/ibarraespinosa/superblog/.git
-git push - origin master
+git push -u origin master
 {% endhighlight %}
 
-check here
+Check this example: ![](https://github.com/ibarraespinosa/superblog/blob/master/figures/git.png?raw=true)
 
 Then go to your repository on Github, click on settings, scroll down and activate your GitHub Pages
 with source on your master branch:
 
+Check this example: ![](https://github.com/ibarraespinosa/superblog/blob/master/figures/git2.png?raw=true)
+
+# Updating with git
+
+Remmeber, everytime you want to update your repo, do:
+
+
+{% highlight bash %}
+git add .
+git commit -m "message"
+git push origin master
+{% endhighlight %}
 
 
 ## Original content below
