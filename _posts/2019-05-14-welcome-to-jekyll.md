@@ -75,7 +75,26 @@ For more info about jekyll, check here https://jekyllrb.com/docs/
 
 ## Github Pages.
 
-Create a repository with the same name of the directory of your blog, better use one word.
+Create a repository with the same name of the directory of your blog.
+
+Now you can go to your directory and do
+
+(change the word _superblog_ for your blog)
+
+{% highlight bash %}
+git init
+git add .
+git commit -m "first message"
+git remote add origin https://github.com/ibarraespinosa/superblog/.git
+git push - origin master
+{% endhighlight %}
+
+check here
+
+Then go to your repository on Github, click on settings, scroll down and activate your GitHub Pages
+with source on your master branch:
+
+
 
 ## Original content below
 
