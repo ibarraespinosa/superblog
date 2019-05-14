@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   I'm a postdoc in atmospheric scioences. I developed some R packages, included <a href="https://atmoschem.github.io/vein/">VEIN</a>
 
 baseurl: "/superblog" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://ibarraespinosa.github.io/superblog/" # the base hostname & protocol for your site
 twitter_username: SergioIbarraEs1
 github_username:  ibarraespinosa
 
