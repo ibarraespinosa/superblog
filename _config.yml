@@ -16,6 +16,7 @@ baseurl: "/superblog" # the subpath of your site, e.g. /blog
 url: "https://ibarraespinosa.github.io/superblog/" # the base hostname & protocol for your site
 twitter_username: SergioIbarraEs1
 github_username:  ibarraespinosa
+profile_picture: https://68.media.tumblr.com/93f384858e9273d5b980b418e2f2f4d5/tumblr_o5i2aybLJG1uapsfmo2_250.png
 
 # Build settings
 markdown: kramdown
