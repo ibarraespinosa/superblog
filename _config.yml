@@ -9,7 +9,8 @@
 title: Sergio Ibarra-Espinosa
 email: zergioibarra@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I'm a postdoc in atmospheric scioences. I developed some R packages, included <a href="https://atmoschem.github.io/vein/">VEIN</a>
+  I'm a postdoc in atmospheric scioences. I developed some R packages, 
+  included VEIN https://www.geosci-model-dev.net/11/2209/2018/
 
 baseurl: "/superblog" # the subpath of your site, e.g. /blog
 url: "https://ibarraespinosa.github.io/superblog/" # the base hostname & protocol for your site
