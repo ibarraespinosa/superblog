@@ -1,0 +1,20 @@
+[
+  
+    {
+      "title"    : "Some bash commands",
+      "category" : "jekyllupdate",
+      "tags"     : "",
+      "url"      : "/superblog/bash/",
+      "date"     : "26 May 2019"
+    } ,
+  
+    {
+      "title"    : "Welcome to my blog",
+      "category" : "jekyllupdate",
+      "tags"     : "",
+      "url"      : "/superblog/welcome-to-jekyll/",
+      "date"     : "14 May 2019"
+    } 
+  
+]
+

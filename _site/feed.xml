@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sergio Ibarra-Espinosa</title>
+    <description>I&#39;m a postdoc in atmospheric scioences. I developed some R packages,  included VEIN https://www.geosci-model-dev.net/11/2209/2018/
+</description>
+    <link>https://ibarraespinosa.github.io/superblog//superblog/</link>
+    <atom:link href="https://ibarraespinosa.github.io/superblog//superblog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 26 May 2019 12:12:10 +0800</pubDate>
+    <lastBuildDate>Sun, 26 May 2019 12:12:10 +0800</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Some bash commands</title>
+        <description>&lt;p&gt;How to replace a word in all files in a directory?&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sed &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;s/A/B/g&#39;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;How to insert text on the first line of all files in the directory?&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.R &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;sed &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;1 s/^/library(vein)\n/&#39;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Sun, 26 May 2019 11:00:00 +0800</pubDate>
+        <link>https://ibarraespinosa.github.io/superblog//superblog/bash/</link>
+        <guid isPermaLink="true">https://ibarraespinosa.github.io/superblog//superblog/bash/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to my blog</title>
+        <description>&lt;p&gt;During many years i’ve had my personal blog hosted on blogger here https://sergioibarra.blogspot.com.br. However, now I’m working on China and www.blogger.com is blocked. Therefore, I created a blog in GitHub because it is not blocked! :laughing:. Also, in this blog I will post mainly in English, however, in my original blog i use to post on portuguese and spanish.&lt;/p&gt; &lt;h2 id=&quot;notes-about-the-blog&quot;&gt;Notes about the blog&lt;/h2&gt; &lt;p&gt;I will post technical information about R, emissions, air pollution, Julia and bash. I’ve been using Ubun tu since 2008 as my unique OS, so &lt;strong&gt;do not expect any post for other OS&lt;/strong&gt;. Also, I use...</description>
+        <pubDate>Tue, 14 May 2019 16:31:35 +0800</pubDate>
+        <link>https://ibarraespinosa.github.io/superblog//superblog/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">https://ibarraespinosa.github.io/superblog//superblog/welcome-to-jekyll/</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+  </channel>
+</rss>
