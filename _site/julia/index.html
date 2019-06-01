@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Some bash commands</title>
+    <title>Installing and plotting with Julia and Gadfly.jl in Visual Code</title>
 
     <meta name="description" content="I'm a postdoc in atmospheric scioences. I developed some R packages,  included VEIN https://www.geosci-model-dev.net/11/2209/2018/
 ">
@@ -16,7 +16,7 @@
     <!-- Social Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@SergioIbarraEs1">
-    <meta name="twitter:title" content="Some bash commands">
+    <meta name="twitter:title" content="Installing and plotting with Julia and Gadfly.jl in Visual Code">
     <meta name="twitter:description" content="I'm a postdoc in atmospheric scioences. I developed some R packages,  included VEIN https://www.geosci-model-dev.net/11/2209/2018/
 ">
 
@@ -25,8 +25,8 @@
     
 
     <!-- Social Facebook/Open Graph -->
-    <meta property="og:url" content="https://ibarraespinosa.github.io/superblog//superblog/bash/">
-    <meta property="og:title" content="Some bash commands">
+    <meta property="og:url" content="https://ibarraespinosa.github.io/superblog//superblog/julia/">
+    <meta property="og:title" content="Installing and plotting with Julia and Gadfly.jl in Visual Code">
     
     <meta property="og:image" content="https://ibarraespinosa.github.io/superblog//superblog/assets/img/blog-image.png">
     
@@ -35,7 +35,7 @@
     <meta property="og:site_name" content="Sergio Ibarra-Espinosa">
 
     <!-- Social Google+/Schema.org  -->
-    <meta itemprop="name" content="Some bash commands"/>
+    <meta itemprop="name" content="Installing and plotting with Julia and Gadfly.jl in Visual Code"/>
     <meta itemprop="description" content="I'm a postdoc in atmospheric scioences. I developed some R packages,  included VEIN https://www.geosci-model-dev.net/11/2209/2018/
 ">
     <meta itemprop="image" content="https://ibarraespinosa.github.io/superblog//superblog/assets/img/blog-image.png"/>
@@ -66,7 +66,7 @@
     <meta name="theme-color" content="#5d4d7a">
 
     <link rel="stylesheet" href="/superblog/assets/css/main.css">
-    <link rel="canonical" href="https://ibarraespinosa.github.io/superblog//superblog/bash/">
+    <link rel="canonical" href="https://ibarraespinosa.github.io/superblog//superblog/julia/">
     <link rel="alternate" type="application/rss+xml" title="Sergio Ibarra-Espinosa" href="https://ibarraespinosa.github.io/superblog//superblog/feed.xml" />
 </head>
 
@@ -98,7 +98,7 @@
     
     <ul>
       <li><span>1</span></li>
-      <li><span> /bash/</span></li>
+      <li><span> /julia/</span></li>
       <li><span>⌘ blogspace λ </span></li>
       <li><span>* Menu</span></li>
     </ul>
@@ -258,20 +258,126 @@
         <section class="post" itemscope itemtype="http://schema.org/BlogPosting">
             
                 <div class="time">
-                    <time itemprop="datePublished" datetime="2019-05-26 12:00:00 +0900">26 May 2019</time>
+                    <time itemprop="datePublished" datetime="2019-06-01 22:25:00 +0900">01 Jun 2019</time>
                 </div>
             
-            <h1 class="post-title" itemprop="name">Some bash commands</h1>
+            <h1 class="post-title" itemprop="name">Installing and plotting with Julia and Gadfly.jl in Visual Code</h1>
 
             <article role="article" id="scroll" class="post-content" itemprop="articleBody">
-                <p>How to replace a word in all files in a directory?</p>
+                <h1 id="install-julia">Install julia</h1>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sed <span class="nt">-i</span> <span class="nt">--</span> <span class="s1">'s/A/B/g'</span> <span class="k">*</span></code></pre></figure>
+<p>The installation of Julia is simple. I can see main options:</p>
 
-<p>How to insert text on the first line of all files in the directory?</p>
+<ol>
+  <li>Standard installation</li>
+  <li>JuliaPro</li>
+</ol>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">for </span>i <span class="k">in</span> <span class="k">$(</span> <span class="nb">ls</span> <span class="k">*</span>.R <span class="k">)</span><span class="p">;</span> <span class="k">do </span>sed <span class="nt">-i</span> <span class="s1">'1 s/^/library(vein)\n/'</span> <span class="nv">$i</span><span class="p">;</span> <span class="k">done</span></code></pre></figure>
+<h2 id="standard-installation-of-julia">Standard installation of Julia</h2>
 
+<p>Following this page https://julialang.org/downloads/platform.html, the 
+installation is very simple.</p>
+<ul>
+  <li>Download https://julialang.org/downloads/index.html to your location</li>
+  <li>Extract to /YOURPATH. Mine is /home/sergio/Downloads/julia-1.1.0</li>
+  <li>Add Julia to PATH</li>
+</ul>
+
+<p>Edit your environment</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>nano /etc/environment</code></pre></figure>
+
+<p>Add these lines:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:/home/sergio/Downloads/julia-1.1.0/bin</code></pre></figure>
+
+<p>Source your environment and type julia</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo source</span> /etc/environment</code></pre></figure>
+
+<h2 id="juliapro">JuliaPro</h2>
+
+<p>Download the .sh file and just install it
+https://juliacomputing.com/products/juliapro</p>
+
+<p>Are you using Windows or Mac? Not my problem.
+Then you can follow the above notes.</p>
+
+<h2 id="visual-code">Visual Code</h2>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">sudo </span>apt install code</code></pre></figure>
+
+<p>Open Visual Code and create a file and save it as Plot1.jl. Automatically
+Visual Code will offers you extensions to work on Julia.</p>
+
+<p>Add the path of Julia into settings/extensions/julia</p>
+
+<p><img src="https://github.com/ibarraespinosa/superblog/blob/master/figures/vscode.png?raw=true" alt="" /></p>
+
+<p>Let’s go</p>
+
+<h1 id="julia-basics">Julia Basics</h1>
+
+<p>They say that Julia walks like python but run like C. I dont believe it but let’s try!</p>
+
+<p>Follow these examples https://julialang.org/learning/</p>
+
+<p>There is a thing with Julia, when you install new packages, sometimes 
+you need to close julia and then load the new package. In that order.</p>
+
+<p>Example:</p>
+
+<figure class="highlight"><pre><code class="language-julia" data-lang="julia"><span class="n">using</span> <span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Plots"</span><span class="x">)</span></code></pre></figure>
+
+<p>Other time you need to build the package, close julia, then load the 
+package.</p>
+
+<figure class="highlight"><pre><code class="language-julia" data-lang="julia"><span class="n">using</span> <span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">build</span><span class="x">(</span><span class="s">"StatsPlots"</span><span class="x">)</span></code></pre></figure>
+
+<p>That it is pretty much!</p>
+
+<h1 id="plotting-with-julia">Plotting with Julia</h1>
+
+<p>Let’s play with Gadfly.jl http://gadflyjl.org</p>
+
+<p>From http://gadflyjl.org/stable/gallery/geometries/</p>
+
+<p>First install</p>
+
+<figure class="highlight"><pre><code class="language-julia" data-lang="julia"><span class="n">using</span> <span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Gadfly"</span><span class="x">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"RDatasets"</span><span class="x">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Compose"</span><span class="x">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Random"</span><span class="x">)</span></code></pre></figure>
+
+<p>If you have problems, close julia and try again. Also, try build instead 
+of add.</p>
+
+<figure class="highlight"><pre><code class="language-julia" data-lang="julia"><span class="n">using</span> <span class="n">Gadfly</span><span class="x">,</span> <span class="n">RDatasets</span>
+<span class="n">set_default_plot_size</span><span class="x">(</span><span class="mi">14</span><span class="n">cm</span><span class="x">,</span> <span class="mi">14</span><span class="n">cm</span><span class="x">)</span>
+
+<span class="n">seals</span> <span class="o">=</span> <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="x">(</span><span class="s">"ggplot2"</span><span class="x">,</span><span class="s">"seals"</span><span class="x">)</span>
+<span class="n">seals</span><span class="x">[:</span><span class="n">Latb</span><span class="x">]</span> <span class="o">=</span> <span class="n">seals</span><span class="x">[:</span><span class="n">Lat</span><span class="x">]</span> <span class="o">+</span> <span class="n">seals</span><span class="x">[:</span><span class="n">DeltaLat</span><span class="x">]</span>
+<span class="n">seals</span><span class="x">[:</span><span class="n">Longb</span><span class="x">]</span> <span class="o">=</span> <span class="n">seals</span><span class="x">[:</span><span class="n">Long</span><span class="x">]</span> <span class="o">+</span> <span class="n">seals</span><span class="x">[:</span><span class="n">DeltaLong</span><span class="x">]</span>
+<span class="n">seals</span><span class="x">[:</span><span class="n">Angle</span><span class="x">]</span> <span class="o">=</span> <span class="n">atan</span><span class="o">.</span><span class="x">(</span><span class="n">seals</span><span class="x">[:</span><span class="n">DeltaLat</span><span class="x">],</span> <span class="n">seals</span><span class="x">[:</span><span class="n">DeltaLong</span><span class="x">])</span>
+
+<span class="n">coord</span> <span class="o">=</span> <span class="n">Coord</span><span class="o">.</span><span class="n">cartesian</span><span class="x">(</span><span class="n">xmin</span><span class="o">=-</span><span class="mf">175.0</span><span class="x">,</span> <span class="n">xmax</span><span class="o">=-</span><span class="mi">119</span><span class="x">,</span> <span class="n">ymin</span><span class="o">=</span><span class="mi">29</span><span class="x">,</span> <span class="n">ymax</span><span class="o">=</span><span class="mi">50</span><span class="x">)</span>
+<span class="c"># Geom.vector also needs scales for both axes:</span>
+<span class="n">xsc</span>  <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">x_continuous</span><span class="x">(</span><span class="n">minvalue</span><span class="o">=-</span><span class="mf">175.0</span><span class="x">,</span> <span class="n">maxvalue</span><span class="o">=-</span><span class="mi">119</span><span class="x">)</span>
+<span class="n">ysc</span>  <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">y_continuous</span><span class="x">(</span><span class="n">minvalue</span><span class="o">=</span><span class="mi">29</span><span class="x">,</span> <span class="n">maxvalue</span><span class="o">=</span><span class="mi">50</span><span class="x">)</span>
+<span class="n">colsc</span> <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">color_continuous</span><span class="x">(</span><span class="n">minvalue</span><span class="o">=-</span><span class="mi">3</span><span class="x">,</span> <span class="n">maxvalue</span><span class="o">=</span><span class="mi">3</span><span class="x">)</span>
+
+<span class="n">layer1</span> <span class="o">=</span> <span class="n">layer</span><span class="x">(</span><span class="n">seals</span><span class="x">,</span> <span class="n">x</span><span class="o">=</span><span class="x">:</span><span class="n">Long</span><span class="x">,</span> <span class="n">y</span><span class="o">=</span><span class="x">:</span><span class="n">Lat</span><span class="x">,</span> <span class="n">xend</span><span class="o">=</span><span class="x">:</span><span class="n">Longb</span><span class="x">,</span> <span class="n">yend</span><span class="o">=</span><span class="x">:</span><span class="n">Latb</span><span class="x">,</span> <span class="n">color</span><span class="o">=</span><span class="x">:</span><span class="n">Angle</span><span class="x">,</span>
+               <span class="n">Geom</span><span class="o">.</span><span class="n">vector</span><span class="x">)</span>
+
+<span class="n">plot</span><span class="x">(</span><span class="n">layer1</span><span class="x">,</span> <span class="n">xsc</span><span class="x">,</span> <span class="n">ysc</span><span class="x">,</span> <span class="n">colsc</span><span class="x">,</span> <span class="n">coord</span><span class="x">)</span></code></pre></figure>
+
+<p>It must (hope) be fast for processing, because I feel it slow for plotting.
+I think it takes time because it generates html for each plot.</p>
+
+<p><img src="https://github.com/ibarraespinosa/superblog/blob/master/figures/gad1.png?raw=true" alt="" /></p>
 
             </article>
 
@@ -279,17 +385,17 @@
 
     <h3>Share</h3>
 
-    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://ibarraespinosa.github.io/superblog//bash/%20via%20&#64;SergioIbarraEs1&hashtags="
+    <a aria-label="Share on Twitter" href="https://twitter.com/intent/tweet?text=&quot;&quot;%20https://ibarraespinosa.github.io/superblog//julia/%20via%20&#64;SergioIbarraEs1&hashtags="
     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" title="Share on Twitter">
         <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
     </a>
 
-    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://ibarraespinosa.github.io/superblog//bash/"
+    <a aria-label="Share on Facebook"href="https://www.facebook.com/sharer/sharer.php?u=https://ibarraespinosa.github.io/superblog//julia/"
     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" title="Share on Facebook">
         <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
     </a>
 
-    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://ibarraespinosa.github.io/superblog//bash/"
+    <a aria-label="Share on Google Plus" href="https://plus.google.com/share?url=https://ibarraespinosa.github.io/superblog//julia/"
     onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" title="Share on Google+">
         <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg>
     </a>
@@ -311,7 +417,7 @@
         disqus_loaded = true;
         var disqus_shortname = '';
         var disqus_title = '';
-        var disqus_url = '/bash/';
+        var disqus_url = '/julia/';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);

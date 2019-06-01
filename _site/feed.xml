@@ -6,9 +6,25 @@
 </description>
     <link>https://ibarraespinosa.github.io/superblog//superblog/</link>
     <atom:link href="https://ibarraespinosa.github.io/superblog//superblog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 28 May 2019 01:14:19 +0800</pubDate>
-    <lastBuildDate>Tue, 28 May 2019 01:14:19 +0800</lastBuildDate>
+    <pubDate>Sat, 01 Jun 2019 23:00:47 +0900</pubDate>
+    <lastBuildDate>Sat, 01 Jun 2019 23:00:47 +0900</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Installing and plotting with Julia and Gadfly.jl in Visual Code</title>
+        <description>&lt;h1 id=&quot;install-julia&quot;&gt;Install julia&lt;/h1&gt; &lt;p&gt;The installation of Julia is simple. I can see main options:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;Standard installation&lt;/li&gt; &lt;li&gt;JuliaPro&lt;/li&gt; &lt;/ol&gt; &lt;h2 id=&quot;standard-installation-of-julia&quot;&gt;Standard installation of Julia&lt;/h2&gt; &lt;p&gt;Following this page https://julialang.org/downloads/platform.html, the installation is very simple.&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Download https://julialang.org/downloads/index.html to your location&lt;/li&gt; &lt;li&gt;Extract to /YOURPATH. Mine is /home/sergio/Downloads/julia-1.1.0&lt;/li&gt; &lt;li&gt;Add Julia to PATH&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Edit your environment&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nano /etc/environment&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Add these lines:&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;:/home/sergio/Downloads/julia-1.1.0/bin&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;p&gt;Source your environment and type julia&lt;/p&gt; &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;sudo source&lt;/span&gt; /etc/environment&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt; &lt;h2 id=&quot;juliapro&quot;&gt;JuliaPro&lt;/h2&gt; &lt;p&gt;Download the .sh file and just install it https://juliacomputing.com/products/juliapro&lt;/p&gt; &lt;p&gt;Are you using Windows...</description>
+        <pubDate>Sat, 01 Jun 2019 22:25:00 +0900</pubDate>
+        <link>https://ibarraespinosa.github.io/superblog//superblog/julia/</link>
+        <guid isPermaLink="true">https://ibarraespinosa.github.io/superblog//superblog/julia/</guid>
+        
+        
+        <category>julia</category>
+        
+        <category>plot</category>
+        
+        <category>install</category>
+        
+      </item>
     
       <item>
         <title>Some bash commands</title>
@@ -21,7 +37,7 @@
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;i &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ls&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.R &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;sed &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;1 s/^/library(vein)\n/&#39;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
-        <pubDate>Sun, 26 May 2019 11:00:00 +0800</pubDate>
+        <pubDate>Sun, 26 May 2019 12:00:00 +0900</pubDate>
         <link>https://ibarraespinosa.github.io/superblog//superblog/bash/</link>
         <guid isPermaLink="true">https://ibarraespinosa.github.io/superblog//superblog/bash/</guid>
         
@@ -35,7 +51,7 @@
       <item>
         <title>Welcome to my blog</title>
         <description>&lt;p&gt;During many years i’ve had my personal blog hosted on blogger here https://sergioibarra.blogspot.com.br. However, now I’m working on China and www.blogger.com is blocked. Therefore, I created a blog in GitHub because it is not blocked! :laughing:. Also, in this blog I will post mainly in English, however, in my original blog i use to post on portuguese and spanish.&lt;/p&gt; &lt;h2 id=&quot;notes-about-the-blog&quot;&gt;Notes about the blog&lt;/h2&gt; &lt;p&gt;I will post technical information about R, emissions, air pollution, Julia and bash. I’ve been using Ubun tu since 2008 as my unique OS, so &lt;strong&gt;do not expect any post for other OS&lt;/strong&gt;. Also, I use...</description>
-        <pubDate>Tue, 14 May 2019 16:31:35 +0800</pubDate>
+        <pubDate>Tue, 14 May 2019 17:31:35 +0900</pubDate>
         <link>https://ibarraespinosa.github.io/superblog//superblog/welcome-to-jekyll/</link>
         <guid isPermaLink="true">https://ibarraespinosa.github.io/superblog//superblog/welcome-to-jekyll/</guid>
         

@@ -1,6 +1,14 @@
 [
   
     {
+      "title"    : "Installing and plotting with Julia and Gadfly.jl in Visual Code",
+      "category" : "juliaplotinstall",
+      "tags"     : "",
+      "url"      : "/superblog/julia/",
+      "date"     : "01 Jun 2019"
+    } ,
+  
+    {
       "title"    : "Some bash commands",
       "category" : "jekyllupdate",
       "tags"     : "",
