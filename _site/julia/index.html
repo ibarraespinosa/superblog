@@ -327,14 +327,14 @@ you need to close julia and then load the new package. In that order.</p>
 
 <p>Example:</p>
 
-<figure class="highlight"><pre><code class="language-julia" data-lang="julia"><span class="n">using</span> <span class="n">Pkg</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Plots"</span><span class="x">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">using</span> <span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">"Plots"</span><span class="p">)</span></code></pre></figure>
 
 <p>Other time you need to build the package, close julia, then load the 
 package.</p>
 
-<figure class="highlight"><pre><code class="language-julia" data-lang="julia"><span class="n">using</span> <span class="n">Pkg</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">build</span><span class="x">(</span><span class="s">"StatsPlots"</span><span class="x">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">using</span> <span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="s">"StatsPlots"</span><span class="p">)</span></code></pre></figure>
 
 <p>That it is pretty much!</p>
 
@@ -346,33 +346,33 @@ package.</p>
 
 <p>First install</p>
 
-<figure class="highlight"><pre><code class="language-julia" data-lang="julia"><span class="n">using</span> <span class="n">Pkg</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Gadfly"</span><span class="x">)</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"RDatasets"</span><span class="x">)</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Compose"</span><span class="x">)</span>
-<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="x">(</span><span class="s">"Random"</span><span class="x">)</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">using</span> <span class="n">Pkg</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">"Gadfly"</span><span class="p">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">"RDatasets"</span><span class="p">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">"Compose"</span><span class="p">)</span>
+<span class="n">Pkg</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s">"Random"</span><span class="p">)</span></code></pre></figure>
 
 <p>If you have problems, close julia and try again. Also, try build instead 
 of add.</p>
 
-<figure class="highlight"><pre><code class="language-julia" data-lang="julia"><span class="n">using</span> <span class="n">Gadfly</span><span class="x">,</span> <span class="n">RDatasets</span>
-<span class="n">set_default_plot_size</span><span class="x">(</span><span class="mi">14</span><span class="n">cm</span><span class="x">,</span> <span class="mi">14</span><span class="n">cm</span><span class="x">)</span>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">using</span> <span class="n">Gadfly</span><span class="p">,</span> <span class="n">RDatasets</span>
+<span class="n">set_default_plot_size</span><span class="p">(</span><span class="mi">14</span><span class="n">cm</span><span class="p">,</span> <span class="mi">14</span><span class="n">cm</span><span class="p">)</span>
 
-<span class="n">seals</span> <span class="o">=</span> <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="x">(</span><span class="s">"ggplot2"</span><span class="x">,</span><span class="s">"seals"</span><span class="x">)</span>
-<span class="n">seals</span><span class="x">[:</span><span class="n">Latb</span><span class="x">]</span> <span class="o">=</span> <span class="n">seals</span><span class="x">[:</span><span class="n">Lat</span><span class="x">]</span> <span class="o">+</span> <span class="n">seals</span><span class="x">[:</span><span class="n">DeltaLat</span><span class="x">]</span>
-<span class="n">seals</span><span class="x">[:</span><span class="n">Longb</span><span class="x">]</span> <span class="o">=</span> <span class="n">seals</span><span class="x">[:</span><span class="n">Long</span><span class="x">]</span> <span class="o">+</span> <span class="n">seals</span><span class="x">[:</span><span class="n">DeltaLong</span><span class="x">]</span>
-<span class="n">seals</span><span class="x">[:</span><span class="n">Angle</span><span class="x">]</span> <span class="o">=</span> <span class="n">atan</span><span class="o">.</span><span class="x">(</span><span class="n">seals</span><span class="x">[:</span><span class="n">DeltaLat</span><span class="x">],</span> <span class="n">seals</span><span class="x">[:</span><span class="n">DeltaLong</span><span class="x">])</span>
+<span class="n">seals</span> <span class="o">=</span> <span class="n">RDatasets</span><span class="o">.</span><span class="n">dataset</span><span class="p">(</span><span class="s">"ggplot2"</span><span class="p">,</span><span class="s">"seals"</span><span class="p">)</span>
+<span class="n">seals</span><span class="p">[:</span><span class="n">Latb</span><span class="p">]</span> <span class="o">=</span> <span class="n">seals</span><span class="p">[:</span><span class="n">Lat</span><span class="p">]</span> <span class="o">+</span> <span class="n">seals</span><span class="p">[:</span><span class="n">DeltaLat</span><span class="p">]</span>
+<span class="n">seals</span><span class="p">[:</span><span class="n">Longb</span><span class="p">]</span> <span class="o">=</span> <span class="n">seals</span><span class="p">[:</span><span class="n">Long</span><span class="p">]</span> <span class="o">+</span> <span class="n">seals</span><span class="p">[:</span><span class="n">DeltaLong</span><span class="p">]</span>
+<span class="n">seals</span><span class="p">[:</span><span class="n">Angle</span><span class="p">]</span> <span class="o">=</span> <span class="n">atan</span><span class="o">.</span><span class="p">(</span><span class="n">seals</span><span class="p">[:</span><span class="n">DeltaLat</span><span class="p">],</span> <span class="n">seals</span><span class="p">[:</span><span class="n">DeltaLong</span><span class="p">])</span>
 
-<span class="n">coord</span> <span class="o">=</span> <span class="n">Coord</span><span class="o">.</span><span class="n">cartesian</span><span class="x">(</span><span class="n">xmin</span><span class="o">=-</span><span class="mf">175.0</span><span class="x">,</span> <span class="n">xmax</span><span class="o">=-</span><span class="mi">119</span><span class="x">,</span> <span class="n">ymin</span><span class="o">=</span><span class="mi">29</span><span class="x">,</span> <span class="n">ymax</span><span class="o">=</span><span class="mi">50</span><span class="x">)</span>
+<span class="n">coord</span> <span class="o">=</span> <span class="n">Coord</span><span class="o">.</span><span class="n">cartesian</span><span class="p">(</span><span class="n">xmin</span><span class="o">=-</span><span class="mf">175.0</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=-</span><span class="mi">119</span><span class="p">,</span> <span class="n">ymin</span><span class="o">=</span><span class="mi">29</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
 <span class="c"># Geom.vector also needs scales for both axes:</span>
-<span class="n">xsc</span>  <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">x_continuous</span><span class="x">(</span><span class="n">minvalue</span><span class="o">=-</span><span class="mf">175.0</span><span class="x">,</span> <span class="n">maxvalue</span><span class="o">=-</span><span class="mi">119</span><span class="x">)</span>
-<span class="n">ysc</span>  <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">y_continuous</span><span class="x">(</span><span class="n">minvalue</span><span class="o">=</span><span class="mi">29</span><span class="x">,</span> <span class="n">maxvalue</span><span class="o">=</span><span class="mi">50</span><span class="x">)</span>
-<span class="n">colsc</span> <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">color_continuous</span><span class="x">(</span><span class="n">minvalue</span><span class="o">=-</span><span class="mi">3</span><span class="x">,</span> <span class="n">maxvalue</span><span class="o">=</span><span class="mi">3</span><span class="x">)</span>
+<span class="n">xsc</span>  <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">x_continuous</span><span class="p">(</span><span class="n">minvalue</span><span class="o">=-</span><span class="mf">175.0</span><span class="p">,</span> <span class="n">maxvalue</span><span class="o">=-</span><span class="mi">119</span><span class="p">)</span>
+<span class="n">ysc</span>  <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">y_continuous</span><span class="p">(</span><span class="n">minvalue</span><span class="o">=</span><span class="mi">29</span><span class="p">,</span> <span class="n">maxvalue</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">colsc</span> <span class="o">=</span> <span class="n">Scale</span><span class="o">.</span><span class="n">color_continuous</span><span class="p">(</span><span class="n">minvalue</span><span class="o">=-</span><span class="mi">3</span><span class="p">,</span> <span class="n">maxvalue</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
-<span class="n">layer1</span> <span class="o">=</span> <span class="n">layer</span><span class="x">(</span><span class="n">seals</span><span class="x">,</span> <span class="n">x</span><span class="o">=</span><span class="x">:</span><span class="n">Long</span><span class="x">,</span> <span class="n">y</span><span class="o">=</span><span class="x">:</span><span class="n">Lat</span><span class="x">,</span> <span class="n">xend</span><span class="o">=</span><span class="x">:</span><span class="n">Longb</span><span class="x">,</span> <span class="n">yend</span><span class="o">=</span><span class="x">:</span><span class="n">Latb</span><span class="x">,</span> <span class="n">color</span><span class="o">=</span><span class="x">:</span><span class="n">Angle</span><span class="x">,</span>
-               <span class="n">Geom</span><span class="o">.</span><span class="n">vector</span><span class="x">)</span>
+<span class="n">layer1</span> <span class="o">=</span> <span class="n">layer</span><span class="p">(</span><span class="n">seals</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="p">:</span><span class="n">Long</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="p">:</span><span class="n">Lat</span><span class="p">,</span> <span class="n">xend</span><span class="o">=</span><span class="p">:</span><span class="n">Longb</span><span class="p">,</span> <span class="n">yend</span><span class="o">=</span><span class="p">:</span><span class="n">Latb</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">:</span><span class="n">Angle</span><span class="p">,</span>
+               <span class="n">Geom</span><span class="o">.</span><span class="n">vector</span><span class="p">)</span>
 
-<span class="n">plot</span><span class="x">(</span><span class="n">layer1</span><span class="x">,</span> <span class="n">xsc</span><span class="x">,</span> <span class="n">ysc</span><span class="x">,</span> <span class="n">colsc</span><span class="x">,</span> <span class="n">coord</span><span class="x">)</span></code></pre></figure>
+<span class="n">plot</span><span class="p">(</span><span class="n">layer1</span><span class="p">,</span> <span class="n">xsc</span><span class="p">,</span> <span class="n">ysc</span><span class="p">,</span> <span class="n">colsc</span><span class="p">,</span> <span class="n">coord</span><span class="p">)</span></code></pre></figure>
 
 <p>It must (hope) be fast for processing, because I feel it slow for plotting.
 I think it takes time because it generates html for each plot.</p>
